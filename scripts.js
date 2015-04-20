@@ -217,11 +217,20 @@ addFriend(myFarm[2], myFarm[0]);
 console.log(myFarm);
 
 // Q7
+function addMatchesArray (farm) {
+	for (var i = 0; i < farm.length; i++) {
+		farm[i].matches = [];
+	}
+} 
 
-
-
-
-
+// Q8
+function giveMatches (farm) {
+	for (var i = 0; i < farm.length; i++) {
+		if (farm[i].friends) {
+			farm[i].matches.push(farm[i].friends[Math.floor(Math.random()*(farm[i].friends.length))]);
+		}
+	}
+}
 
 
 
